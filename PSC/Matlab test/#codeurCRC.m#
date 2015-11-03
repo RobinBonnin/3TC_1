@@ -1,0 +1,15 @@
+
+%script codeur CRC8
+
+function codeCrc = codeurCRC(chaineBits)
+   
+    %génerer un polynome generateur 
+    crcGen=comm.CRCGenerator('Polynomial',[1 1 1 0 1 0 1 0 1],'ChecksumsPerFrame',1);
+    codeCrc=step(crcGen,chaineBits);
+    %ajoute un bit d'erreur a chaque codeCrc pour tester si le CRC marche
+    errorPattern = randerr(1,9,1).';
+    codeCrc = xor(codeCrc , errorPattern(:)); 
+
+    
+end
+

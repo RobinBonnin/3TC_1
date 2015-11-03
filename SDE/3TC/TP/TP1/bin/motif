@@ -1,0 +1,11 @@
+echo "Donnez un motif à chercher et un fichier"
+fichier=0
+read motif fichier
+case $fichier in
+0) echo "Recherche dans le fichier /etc/hosts par défaut"
+grep $motif /etc/hosts;;
+*) echo "Recherche dans le fichier $fichier"
+grep '$motif' $fichier;;
+esac
+  
+

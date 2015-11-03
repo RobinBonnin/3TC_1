@@ -1,0 +1,24 @@
+<CTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <title>Posts</title>
+    </head>
+    <body>
+    {%if posts==[]:%}
+      <p>Aucun post</p>
+{% endif %}
+    {% for post in posts %}
+    <p>{{ post }}</p>
+    {% endfor %}
+
+    <p>
+      <form action="/post" method="POST">
+          <input type="text" name="post">
+              <input type="submit" value="Boom !">
+                </form>
+                </p>
+
+                </body>
+                </html>
+

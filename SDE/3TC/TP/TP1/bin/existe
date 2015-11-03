@@ -1,0 +1,8 @@
+echo "Donner un nom de fichier et un répertoire "
+read a b
+if [ -f $b/$a ]
+  then  
+  echo "Le fichier se trouve dans le répertoire"
+  else
+    echo "Le fichier ne se trouve pas dans le répertoire !"
+    fi

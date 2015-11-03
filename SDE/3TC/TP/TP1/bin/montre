@@ -1,0 +1,33 @@
+echo "Nom du fichier :"
+read nom
+if [ -d $nom ]
+then
+echo "Ceci est un répertoire !"
+elif [ -b $nom ]
+then
+echo "Ceci est un périphérique bloc !"
+elif [ -c $nom ]
+then
+echo "Ceci est un fichier caractère !"
+elif [ -f $nom ]
+then 
+ls -s $nom | cut -f1 -d\ 
+if [ -r $nom ]
+then
+echo "Le fichier est lisible."
+else 
+echo "Le fichier ne peut être lu."
+fi
+if [ -w $nom  ]
+then 
+echo "Le fichier peut être écrit."
+else
+echo "Le fichier ne peux être écrit."
+fi
+if [ -x $nom ]
+then 
+echo "Le fichier est exécutable."
+else 
+echo "Le fichier ne peux être exécuté."
+fi
+fi

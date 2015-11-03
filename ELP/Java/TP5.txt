@@ -1,0 +1,73 @@
+-map[string][]string : clé sont des chaines; valeurs chaines
+-erreur exception : ajouter bloc finally au bloc try catch; la méthode contenant le code doit propager cette classe
+-function (hello) : 56
+-def a true : Vrai
+-java Scorer : Dans le dossier come/games/bowling à partir des dossiers indiqués dans le classpath
+-Go est un langage statiquement typé
+-code class A : virtual
+-classe point : déclarer public
+- i = function () { / function i() : Vrai
+- javascript object : Comme un hashmap
+- Programme java phenomene : classe méthode abstraite
+-Instruction ne compile pas en C++ : aucune surcharge
+-En POO un objet en possède un autre : composition
+-A a1 = new : 2 ref sur le même objet
+- goroutine lance un thread POSIX : faux
+-  doSomething : requête directement à A
+- Clojure langage Hono : Structure de données
+- Fonction template C++ : 2 méthodes m1 et m2
+- (reduce * (1 2 3 ...) : 0*
+-(map # ... ) : (11 12 13 14)
+-Go instruction <-a : Lecture depuis un channel
+-lambda expression javascript : res = (1+10)*3 = 33
+-duck typing : Vrai
+- sortie standard  var i= 0; function test () : 0
+
+
+
+
+
+
+1/ Utiliser go
+
+- go build => compile
+- go install => complile a disance (makefile et cree un repertoire bin)
+- go clean efface les executables
+- go install/start/hello => complie crée dans un dossier bin un execeutable hello
+
+2/
+-le type des variable est declaré apres la varaible et le type de retour apres la parenthese
+
+-les déclarations des paramètres se font comme java et le type retourné est
+ situé à la fin de la ligne juste avant l'accolade
+ 
+-type <=> comme un objet dans java avec int qui est un attribut (ici x)
+          et func() qui est une méthode de l'objet (qui additionne l'attribut avec le paramètre y)
+           
+-
+
+slices comme en matlab a[1:5]
+copy permet de copier
+len donne la taille
+et cap la capacité
+
+
+Maps
+1) make(map[string]int) ints est de type int
+2) ints[string]
+3) deletet supprime la valeur a l'emplacmenet choisit delete(ints , "4");
+4) pour clé non defini vaut 0
+5)  res, ok := ints["666"]
+  fmt.Println("res = ", res, ", ok = ", ok)
+  retourne un booleen false si pas defini true sinon
+
+Go routine
+
+on quitte la fonction prinicipale trop tot et donc impossible d'executé la go routine
+c'est un peu comme dees threads qui s'execute top tot
+solution les channels qui blocque la go routine principale et l'empeche de terminé le programme trop tot
+
+
+channels tampon
+
+il y a un pb de deadlock un tread qui attente une ressourse d'un tread qui en attend un autre ressource pour le debloquer
